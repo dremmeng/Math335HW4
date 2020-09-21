@@ -34,123 +34,105 @@
 \begin{document}
 
 \lhead{Drew Remmenga MATH 335}
-\rhead{HW \#3}
+\rhead{HW \#4}
 %\lhead{Independent Study}
 %\rhead{R Lab}
 
 \begin{enumerate}
 
 \item 
+	\begin{equation*}
+	\begin{split}
+f(y) & = (\theta+1)y^{\theta} \\
+\mu = \int_{\mathcal{D}} f(y) dy &= \int_{0}^{1} (\theta+1)y^{\theta} y dy \\
+ &= \int_{0}^{1} (\theta+1)y^{\theta+1} dy \\
+&= \frac{(\theta+1)}{(\theta+2} y^{\theta +2} ]_{0}^{1} \\
+&= \frac{(\theta+1)}{(\theta+2} \\
+\bar{Y} &= \frac{(\theta+1)}{(\theta+2}\\
+\bar{Y}(\theta +2) &= \theta+1\\
+\bar{Y}\theta +2\bar{Y} &= \theta+1\\
+\bar{Y}\theta - \theta &= 1 - 2\bar{Y} \\
+\theta(\bar{Y} -1) & = 1 - 2\bar(Y)\\
+\hat{\theta} & = \frac{1-2\bar{Y}}{\bar{Y} -1}
+	\end{split}
+	\end{equation*}
+\item
 	\begin{enumerate}
 	\item
 		\begin{equation*}
 		\begin{split}
-		E[Y_{(1)}] & = \int_{0}^{\infty} (y*\frac{d}{dy}F_{Y_{(1)}}(y))dy \\
-		& = \int_{0}^{\infty} (\frac{-ny}{\theta} e^{\frac{-ny}{\theta}})dy \\
-		& = ye^{\frac{-ny}{\theta}}]_{0}^{\infty} - \int_{0}^{\infty} (e^{\frac{-ny}{\theta}})dy \\
-		& = 0-0 +\frac{-\theta}{n} e^{\frac{-ny}{\theta}}]_{0}^{\infty}\\
-		& = 0-\frac{-\theta}{n}\\
-		& = \frac{\theta}{n}\\
+		l(\theta;X) = {100 \choose 33} \theta^{33}(1- \theta)^{100 -33} \\
 		\end{split}
 		\end{equation*}
-		Unbiased after a sample size of one.
 	\item
-		Multiply by the sample size to receive an unbiased estimator for $\theta$.
 		\begin{equation*}
 		\begin{split}
-		E[Y_{(1)}] & = \int_{0}^{\infty} (n*y*\frac{d}{dy}F_{Y_{(1)}}(y))dy \\
-		& = \int_{0}^{\infty} (\frac{-n^{2}y}{\theta} e^{\frac{-ny}{\theta}})dy \\
-		& =n( 0+0 - 0 -\frac{-\theta}{n})\\
-		& = \theta \\
+		\mu &= n \theta \\
+		\frac{\bar{X}}{100} &= \hat{\theta}
 		\end{split}
 		\end{equation*}
 	\end{enumerate}
 \item
-	If we show:
-	\begin{equation*}
-	\begin{split}
-	\lim_{n\rightarrow \infty} Pr(\left| \hat{p} - p \right| > \epsilon) &= 0, \forall \epsilon > 0 \\
-	\end{split}
-	\end{equation*}
-	then $\hat{p}$ is consistent for $p$.	\\
-	$\bar{X}$ is consistent for $\mu$, therefore we can write;
-	\begin{equation*}
-	\begin{split}
-	\lim_{n\rightarrow \infty} Pr(\left| n\hat{p} - np \right| > \epsilon) &= 0, \forall \epsilon > 0 \\
-	\lim_{n\rightarrow \infty} Pr(\left| \hat{p} - p \right|\left|n\right| > \epsilon) &= 0, \forall \epsilon > 0 \\
-	\end{split}
-	\end{equation*}	
-	n is always a natural number, therefore;
-	\begin{equation*}
-	\begin{split}
-	\lim_{n\rightarrow \infty} Pr(\left| \hat{p} - p \right|n > \epsilon) &= 0, \forall \epsilon > 0 \\
-	\lim_{n\rightarrow \infty} Pr(\left| \hat{p} - p \right| > \frac{\epsilon}{n}) &= 0, \forall \epsilon > 0 \\
-	\end{split}
-	\end{equation*}
-	Then without loss of generality for $\epsilon$;
-	\begin{equation*}
-	\begin{split}
-	\lim_{n\rightarrow \infty} Pr(\left| \hat{p} - p \right| > \epsilon) &= 0, \forall \epsilon > 0 \\
-	\end{split}
-	\end{equation*}
-	$\hat{p}$ is consistent for $p$, then.
-\item
 	\begin{enumerate}
 	\item
 		\begin{equation*}
 		\begin{split}
-		\int_{0}^{1} (y\theta y^{\theta-1})dy &= E[Y]\\
-		\int_{0}^{1} (\theta y^{\theta})dy &= E[Y]\\
-		\int_{0}^{1} (\theta y^{\theta})dy &= E[Y]\\\
-		\frac{\theta y ^{\theta+1}}{\theta+1}]_{0}^{1} &= E[Y] \\
-		\frac{\theta}{\theta+1} &= E[Y]
-		\end{split}
-		\end{equation*}	
-	\item
-		$\bar{X}$ is consistent for $\mu$ by WLoLN \\
-		So $\bar{Y}$ is consistent for $\frac{\theta}{\theta+1}$ \\
-	\end{enumerate}
-\item
-	\begin{enumerate}
-	\item
-		It looks normal with the proper symmetry and the fifteen percent variance.
-		\begin{figure}[H]
-		\includegraphics{Samplemeans.png}
-		\end{figure}
-	\item
-		\begin{equation*}
-		\begin{split}
-		\sqrt{n}(\bar{X} - \lambda) &\rightarrow N(0,\sigma^{2}(x)) \\
-		\sqrt{100}(\bar{X} - \lambda) &\rightarrow N(0,1) \\
-		(\bar{X} - 1) &\rightarrow N(0,\frac{1}{100}) \\
-		\end{split}
-		\end{equation*}		
-	\item
-		$\bar{X}$ = 1.00004195 \\
-		$\bar{X} - X \approx$ 0 \\
-		$Var[X]$ = .009978 \\
-		These match.
-	\end{enumerate}
-\item
-	\begin{enumerate}
-	\item
-		It sure looks normal to me. It's even more symmetric than the last one with a similar quartile range. 
-		\begin{figure}[H]
-		\includegraphics{evec.png}
-		\end{figure}
-	\item
-		\begin{equation*}
-		\begin{split}
-		\sqrt{n}(\bar{X} - \lambda) &\rightarrow N(e^{-1},\sigma^{2}(x)\frac{d}{dx}(e^{-x})^{2}) \\
-		(\bar{X} - \lambda) &\rightarrow N(e^{-1},\frac{1}{100}(-e^{-1})^{2}) \\
-		(\bar{X} - e^{-1}) &\rightarrow N(0,\frac{e^{-2}}{100}) \\
+		\mu &= \frac{1}{\lambda}\\
+		\bar{X} & = \frac{1}{\hat{\lambda}}\\
+		\frac{1}{\bar{X}} & = \hat{\lambda}\\
 		\end{split}
 		\end{equation*}
 	\item
-		$\bar{X}$ = .369698 \\
-		$\bar{X} - \lambda \approx$ 0 \\
-		$Var[X]$ = .001357471 \\
-		These match.
+		\begin{equation*}
+		\begin{split}
+		l(\lambda; X) & = \prod_{n=1}^{N} \lambda e^{-\lambda X_{n}} \\
+		ln(l(\lambda; X) & =  ln(\prod_{n=1}^{N} \lambda e^{-\lambda X_{n}}) \\
+		ln(l(\lambda; X) & =  N ln(\lambda) - \lambda \sum_{n=1}^{N} X_{n} \\
+		\frac{d}{d\lambda} ln(l(\lambda; X) & = \frac{d}{d\lambda}[ N ln(\lambda) - \lambda \sum_{n=1}^{N} X_{n}] \\
+		\frac{d}{d\lambda} ln(l(\lambda; X) & = \frac{N}{\lambda} - \sum_{n=1}^{N} X_{n} \\
+		\frac{d}{d\lambda} ln(l(\lambda; X) & = 0 \\
+		0 & = \frac{N}{\lambda} - \sum_{n=1}^{N} X_{n} \\
+		\sum_{n=1}^{N} X_{n} & = \frac{N}{\lambda} \\
+		\frac{\sum_{n=1}^{N} X_{n}}{N} & = \frac{1}{\lambda} \\
+		\frac{1}{\bar{X}}  &= \hat{\lambda}
+		\end{split}
+		\end{equation*}
+	\item
+		\begin{equation*}
+		\begin{split}
+		\sqrt{n}(g(\hat{\lambda})-g(\mu)) & \rightarrow N(0, g'(\mu)^{2}\sigma^{2}) \\
+		g'(\mu)   = -\mu^{-2} \\
+		g'(\frac{1}{\lambda})  = -\lambda^{2} \\
+		\sqrt{n} (\frac{1}{\bar{X}} - \lambda) &  \rightarrow N(0, \lambda^{2})\\
+		\end{split}
+		\end{equation*}
+	\end{enumerate}
+\item
+	\begin{enumerate}
+	\item
+		\begin{equation*}
+		\begin{split}
+		P(X=1) = \lambda e^{-\lambda}
+		\end{split}
+		\end{equation*}
+	\item
+		\begin{equation*}
+		\begin{split}
+		\hat{\lambda} & = \frac{1}{n}
+		\end{split}
+		\end{equation*}
+	\item
+		\begin{equation*}
+		\begin{split}
+		\sqrt{n} (\frac{1}{n} - 1) &  \rightarrow N(0, n)\\
+		\end{split}
+		\end{equation*}
+	\item
+	$n > 0$
+	\item
+	
+	\item
+	\item
 	\end{enumerate}
 \end{enumerate}
 
