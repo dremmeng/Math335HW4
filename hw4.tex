@@ -118,21 +118,31 @@ f(y) & = (\theta+1)y^{\theta} \\
 	\item
 		\begin{equation*}
 		\begin{split}
-		\hat{\lambda} & = \frac{1}{n}
+		\hat{MLE} & = \bar{X}e^{-\bar{X}}
 		\end{split}
 		\end{equation*}
 	\item
 		\begin{equation*}
 		\begin{split}
-		\sqrt{n} (\frac{1}{n} - 1) &  \rightarrow N(0, n)\\
+		\sqrt{n} (\bar{X}e^{-\bar{X}} - \lambda e^{-\lambda}) &  \rightarrow N(0,\lambda(-\lambda e^{-\lambda}+e^{-\lambda})^{2} )\\
 		\end{split}
 		\end{equation*}
 	\item
-	$n > 0$
+	$\lambda \neq 1$
 	\item
-	
+		\begin{equation*}
+		\begin{split}
+		\hat{MLE} & = \bar{X}^{2} \\
+		\end{split}
+		\end{equation*}
 	\item
+		\begin{equation*}
+		\begin{split}
+		\sqrt{n} (\bar{X}^{2} - \lambda^{2}) &  \rightarrow N(0, \lambda 4 \lambda ^{2})\\
+		\end{split}
+		\end{equation*}
 	\item
+	$\lambda > 0 $
 	\end{enumerate}
 \end{enumerate}
 
